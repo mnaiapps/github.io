@@ -1,269 +1,300 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>Expense mnAI - Guide Complet de l'Utilisateur</title>
-    <style>
-        :root {
-            --bg: #f2f2f7; --card: #ffffff; --text: #1c1c1e; --secondary: #636366;
-            --accent: #007aff; --border: #e5e5ea; --tip-bg: rgba(0, 122, 255, 0.05);
-            --tip-border: #007aff; --code-bg: #f8f8f8;
-        }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg: #000000; --card: #1c1c1e; --text: #ffffff; --secondary: #8e8e93;
-                --accent: #0a84ff; --border: #38383a; --code-bg: #2c2c2e;
-            }
-        }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 0; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        .content-card { background: var(--card); border-radius: 32px; padding: 60px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid var(--border); }
-        h1 { font-size: 42px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 20px; line-height: 1.1; }
-        h2 { font-size: 28px; font-weight: 700; margin-top: 80px; margin-bottom: 24px; border-bottom: 1.5px solid var(--border); padding-bottom: 16px; color: var(--accent); scroll-margin-top: 100px; }
-        h3 { font-size: 20px; font-weight: 600; margin-top: 40px; margin-bottom: 16px; scroll-margin-top: 100px; }
-        p, li { font-size: 16px; margin-bottom: 18px; color: var(--text); opacity: 0.9; }
-        strong { font-weight: 600; color: var(--text); }
-        .note { background: var(--tip-bg); border-left: 5px solid var(--tip-border); padding: 24px; border-radius: 12px; margin: 32px 0; font-size: 15px; }
-        .note h5 { margin: 0 0 8px 0; color: var(--tip-border); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
-        .screenshot { background: var(--bg); border: 1px dashed var(--border); border-radius: 16px; padding: 40px; text-align: center; color: var(--secondary); font-style: italic; margin: 30px 0; font-size: 14px; }
-        table { width: 100%; border-collapse: collapse; margin: 32px 0; background: var(--bg); border-radius: 12px; overflow: hidden; font-size: 15px; }
-        th, td { text-align: left; padding: 14px; border-bottom: 1px solid var(--border); }
-        th { font-size: 12px; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.5px; background: rgba(0,0,0,0.02); }
-        .toc { background: var(--bg); border-radius: 20px; padding: 30px; margin-bottom: 50px; }
-        .toc h4 { margin: 0 0 15px 0; font-size: 12px; text-transform: uppercase; color: var(--secondary); letter-spacing: 1.5px; }
-        .toc ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-        .toc li { margin-bottom: 6px; font-size: 14px; }
-        .toc a { text-decoration: none; color: var(--accent); font-weight: 500; }
-        @media (max-width: 600px) { h1 { font-size: 32px; } .content-card { padding: 30px 20px; border-radius: 0; border: 0; } .container { padding: 0; } .toc ul { grid-template-columns: 1fr; } }
-    </style>
-</head>
-<body>
-<div class="container">
-    <div class="content-card">
-        <h1>Expense mnAI<br><span style="color: var(--secondary); font-weight: 500;">Guide Complet de l'Utilisateur</span></h1>
-        
-        <nav class="toc">
-            <h4>Aller à la section</h4>
-            <ul>
-                <li><a href="#introduction">1. Introduction</a></li>
-                <li><a href="#getting-started">2. Prise en main</a></li>
-                <li><a href="#accounts">3. Comptes</a></li>
-                <li><a href="#categories-groups">4. Catégories & Groupes</a></li>
-                <li><a href="#transactions">5. Transactions</a></li>
-                <li><a href="#recurring-bills">6. Factures Récurrentes</a></li>
-                <li><a href="#recurring-budgets">7. Budgets Récurrents</a></li>
-                <li><a href="#reports-analytics">8. Rapports & Analyses</a></li>
-                <li><a href="#sync-icloud">9. Sync & iCloud</a></li>
-                <li><a href="#workspaces-collaboration">10. Espaces & Collaboration</a></li>
-                <li><a href="#privacy-security">11. Confidentialité & Sécurité</a></li>
-                <li><a href="#faq">12. Questions Fréquentes (FAQ)</a></li>
-            </ul>
-        </nav>
+\<\!DOCTYPE html\>
 
-        <section id="introduction">
-            <h2>1. Introduction</h2>
-            <p>Expense mnAI est un gestionnaire financier intelligent et privé, conçu exclusivement pour les appareils Apple. Il a été créé pour vous offrir une vision complète de votre vie financière — vos revenus, vos dépenses, vos engagements récurrents et la santé de votre budget — sans jamais partager vos données avec des annonceurs, des fournisseurs d'analyses tiers ou des serveurs externes en dehors de l'infrastructure iCloud d'Apple.</p>
-            <h3>Ce que fait Expense mnAI</h3>
-            <p>Expense mnAI suit l'argent qui entre, qui sort et qui circule entre vos comptes. Il comprend la différence entre un dépôt de salaire, un achat au supermarché et un paiement par carte de crédit, en organisant chaque mouvement pour que vous puissiez comprendre où va réellement votre argent chaque mois.</p>
-            <p>Au-delà du simple suivi, Expense mnAI automatise les parties répétitives des finances personnelles. Vos factures récurrentes — loyer, abonnements, services publics — sont générées automatiquement à leurs dates d'échéance, de sorte que vous n'avez jamais à les enregistrer manuellement. Vos budgets se réinitialisent d'eux-mêmes au début de chaque mois. Et en un coup d'œil, le tableau de bord vous montre votre valeur nette, le flux de trésorerie du mois et vos principales catégories de dépenses, avant même d'avoir ouvert un seul menu.</p>
-            <h3>Ce qui rend Expense mnAI différent</h3>
-            <ul>
-                <li><strong>Zéro accès développeur.</strong> Vos transactions, soldes et comptes sont stockés uniquement sur votre appareil et dans votre compte iCloud personnel. Les développeurs ne peuvent pas voir vos données. Il n'y a pas de serveurs d'entreprise détenant vos informations financières.</li>
-                <li><strong>Protection native Apple.</strong> Tout est crypté via votre identifiant Apple et synchronisé via iCloud. La même infrastructure de sécurité qui protège vos photos et messages protège vos finances.</li>
-                <li><strong>Aucun suivi tiers.</strong> Expense mnAI ne contient aucun SDK publicitaire, aucun cadre d'analyse et aucun courtier de données. Votre comportement financier n'est jamais utilisé pour établir un profil.</li>
-                <li><strong>Espaces de travail (Workspaces).</strong> Vos finances personnelles et les finances partagées du foyer sont maintenues séparées. Un espace de travail personnel n'appartient qu'à vous. Les espaces partagés permettent la collaboration avec des membres de la famille ou un partenaire — où tout le monde voit les mêmes données en temps réel.</li>
-            </ul>
-        </section>
+\<html lang="fr"\>
+\<head\>
+\<meta charset="UTF-8"\>
+\<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"\>
+\<title\>Expense mnAI - Guide de l'Utilisateur Complet\</title\>
+\<style\>
+:root {
+\--bg: \#f2f2f7; --card: \#ffffff; --text: \#1c1c1e; --secondary: \#636366;
+\--accent: \#007aff; --border: \#e5e5ea; --tip-bg: rgba(0, 122, 255, 0.05);
+\--tip-border: \#007aff; --code-bg: \#f8f8f8;
+}
+@media (prefers-color-scheme: dark) {
+:root {
+\--bg: \#000000; --card: \#1c1c1e; --text: \#ffffff; --secondary: \#8e8e93;
+\--accent: \#0a84ff; --border: \#38383a; --code-bg: \#2c2c2e;
+}
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 0; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+.container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+.content-card { background: var(--card); border-radius: 32px; padding: 60px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid var(--border); }
+h1 { font-size: 42px; font-weight: 800; letter-spacing: -1.5px; margin-bottom: 20px; line-height: 1.1; }
+h2 { font-size: 28px; font-weight: 700; margin-top: 80px; margin-bottom: 24px; border-bottom: 1.5px solid var(--border); padding-bottom: 16px; color: var(--accent); scroll-margin-top: 100px; }
+h3 { font-size: 20px; font-weight: 600; margin-top: 40px; margin-bottom: 16px; scroll-margin-top: 100px; }
+p, li { font-size: 16px; margin-bottom: 18px; color: var(--text); opacity: 0.9; }
+strong { font-weight: 600; color: var(--text); }
+.note { background: var(--tip-bg); border-left: 5px solid var(--tip-border); padding: 24px; border-radius: 12px; margin: 32px 0; font-size: 15px; }
+.note h5 { margin: 0 0 8px 0; color: var(--tip-border); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+.screenshot { background: var(--bg); border: 1px dashed var(--border); border-radius: 16px; padding: 40px; text-align: center; color: var(--secondary); font-style: italic; margin: 30px 0; font-size: 14px; }
+table { width: 100%; border-collapse: collapse; margin: 32px 0; background: var(--bg); border-radius: 12px; overflow: hidden; font-size: 15px; }
+th, td { text-align: left; padding: 14px; border-bottom: 1px solid var(--border); }
+th { font-size: 12px; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.5px; background: rgba(0,0,0,0.02); }
+.toc { background: var(--bg); border-radius: 20px; padding: 30px; margin-bottom: 50px; }
+.toc h4 { margin: 0 0 15px 0; font-size: 12px; text-transform: uppercase; color: var(--secondary); letter-spacing: 1.5px; }
+.toc ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.toc li { margin-bottom: 6px; font-size: 14px; }
+.toc a { text-decoration: none; color: var(--accent); font-weight: 500; }
+@media (max-width: 600px) { h1 { font-size: 32px; } .content-card { padding: 30px 20px; border-radius: 0; border: 0; } .container { padding: 0; } .toc ul { grid-template-columns: 1fr; } }
+\</style\>
+\</head\>
+\<body\>
+\<div class="container"\>
+\<div class="content-card"\>
+\<h1\>Expense mnAI<br>\<span style="color: var(--secondary); font-weight: 500;"\>Guide de l'Utilisateur Complet\</span\>\</h1\>
 
-        <section id="getting-started">
-            <h2>2. Prise en main</h2>
-            <h3>2.1 Configuration des Espaces de Travail</h3>
-            <p>Lors de la première ouverture d'Expense mnAI, un Espace de travail personnel est automatiquement créé. C'est votre environnement financier privé — vous seul pouvez le voir, et il est stocké exclusivement dans votre compte iCloud personnel. Personne d'autre, même les personnes que vous inviterez plus tard dans un espace partagé, ne verra jamais votre espace personnel.</p>
-            <p><strong>Qu'est-ce qu'un Espace de travail ?</strong><br>
-            Un espace de travail est un environnement financier autonome. Il possède ses propres comptes, catégories, transactions, budgets et factures. Considérez-le comme un jeu de livres comptables séparé. Votre espace personnel contient vos finances individuelles. Un espace partagé pourrait contenir vos finances domestiques — les dépenses et revenus que vous gérez avec quelqu'un d'autre.</p>
-            <p><strong>Créer un espace partagé</strong><br>
-            Les espaces partagés nécessitent un abonnement de Partage familial. Pour en créer un, appuyez sur le nom de l'espace de travail en haut de l'écran pour ouvrir le sélecteur, puis appuyez sur "Créer un espace partagé". Un nom vous sera demandé. Une fois créé, vous pouvez inviter d'autres personnes à le rejoindre — voir la section 10.4 pour le processus complet.</p>
-            <p><strong>Changer d'espace de travail</strong><br>
-            Appuyez sur le nom de l'espace de travail ou sur l'avatar en haut de l'écran à tout moment pour voir vos espaces disponibles et basculer entre eux. L'application mémorise le dernier espace utilisé.</p>
+```
+    <nav class="toc">
+        <h4>Aller à la section</h4>
+        <ul>
+            <li><a href="#introduction">1. Introduction</a></li>
+            <li><a href="#getting-started">2. Prise en main</a></li>
+            <li><a href="#accounts">3. Comptes</a></li>
+            <li><a href="#categories-groups">4. Catégories et Groupes</a></li>
+            <li><a href="#transactions">5. Transactions</a></li>
+            <li><a href="#recurring-bills">6. Factures récurrentes</a></li>
+            <li><a href="#recurring-budgets">7. Budgets récurrents</a></li>
+            <li><a href="#reports-analytics">8. Rapports et Analyses</a></li>
+            <li><a href="#sync-icloud">9. Synchronisation et iCloud</a></li>
+            <li><a href="#workspaces-collaboration">10. Espaces de travail et Collaboration</a></li>
+            <li><a href="#privacy-security">11. Confidentialité et Sécurité</a></li>
+            <li><a href="#faq">12. Questions Fréquemment Posées</a></li>
+        </ul>
+    </nav>
 
-            <h3>2.2 Données par défaut et Premier lancement</h3>
-            <p>Au premier lancement, Expense mnAI remplit votre espace personnel avec un ensemble de types de comptes, de groupes de catégories et de catégories par défaut. Ce sont des points de départ basés sur des modèles financiers courants — vous n'êtes pas lié à ceux-ci et pouvez ajouter, modifier ou supprimer n'importe quoi, sauf les types système intégrés.</p>
-            <p><strong>Types de comptes par défaut :</strong> Espèces, Courant, Épargne, Carte de crédit, Investissement, Prêt.</p>
-            <p><strong>Groupes de catégories et catégories par défaut</strong></p>
-            <table>
-                <thead><tr><th>Groupe</th><th>Catégories</th></tr></thead>
-                <tbody>
-                    <tr><td>Alimentation & Restauration</td><td>Courses, Sorties restaurant</td></tr>
-                    <tr><td>Transport</td><td>Carburant, Transports publics</td></tr>
-                    <tr><td>Logement</td><td>Loyer / Hypothèque</td></tr>
-                    <tr><td>Services publics</td><td>Électricité, Internet</td></tr>
-                    <tr><td>Divertissement</td><td>(Ajoutez les vôtres)</td></tr>
-                    <tr><td>Salaire</td><td>Salaire de base, Bonus</td></tr>
-                    <tr><td>Investissements</td><td>(Ajoutez les vôtres)</td></tr>
-                    <tr><td>Freelance</td><td>(Ajoutez les vôtres)</td></tr>
-                    <tr><td>Cadeaux</td><td>(Ajoutez les vôtres)</td></tr>
-                    <tr><td>Autres revenus</td><td>(Ajoutez les vôtres)</td></tr>
-                </tbody>
-            </table>
-            <p>Vous êtes encouragé à ajouter des catégories qui reflètent votre vie réelle — qu'il s'agisse de "Frais de scolarité", "Soins des animaux" ou "Activité complémentaire".</p>
+    <section id="introduction">
+        <h2>1. Introduction</h2>
+        <p>Expense mnAI est un gestionnaire financier intelligent et privé, conçu exclusivement pour les appareils Apple. Il est conçu pour vous donner une image complète de votre vie financière — vos revenus, vos dépenses, vos engagements récurrents et la santé de votre budget — sans jamais partager vos données avec des annonceurs, des services d'analyse tiers ou tout serveur externe en dehors de l'infrastructure iCloud d'Apple.</p>
+        <h3>Ce que fait Expense mnAI</h3>
+        <p>Expense mnAI suit l'argent qui entre, qui sort et qui circule entre vos comptes. Il comprend la différence entre un dépôt de salaire, un passage au supermarché et un paiement par carte de crédit, et organise chacun d'eux pour que vous puissiez comprendre où va réellement votre argent chaque mois.</p>
+        <p>Au-delà du simple suivi, Expense mnAI automatise les parties répétitives des finances personnelles. Vos factures récurrentes — loyer, abonnements, services publics — sont générées automatiquement à leurs dates d'échéance afin que vous n'ayez jamais à les enregistrer manuellement. Vos budgets se réinitialisent d'eux-mêmes au début de chaque mois. Et en un coup d'œil, le tableau de bord vous indique votre valeur nette, votre flux de trésorerie du mois et vos principales catégories de dépenses avant même d'avoir ouvert un menu.</p>
+        <h3>Ce qui rend Expense mnAI différent</h3>
+        <ul>
+            <li><strong>Zéro accès développeur.</strong> Vos transactions, soldes et comptes sont stockés exclusivement sur votre appareil et dans votre compte iCloud personnel. Les développeurs ne peuvent pas voir vos données. Aucun serveur d'entreprise ne détient vos informations financières.</li>
+            <li><strong>Protection native Apple.</strong> Tout est crypté par votre identifiant Apple et synchronisé via iCloud. La même infrastructure de sécurité qui protège vos photos et vos messages protège vos finances.</li>
+            <li><strong>Aucun suivi tiers.</strong> Expense mnAI ne contient aucun SDK publicitaire, aucun cadre d'analyse et aucun courtier de données. Votre comportement financier n'est jamais utilisé pour établir votre profil.</li>
+            <li><strong>Espaces de travail.</strong> Vos finances personnelles et vos finances domestiques partagées sont maintenues bien séparées. Un espace de travail personnel n'appartient qu'à vous. Les espaces de travail partagés vous permettent de collaborer avec des membres de la famille ou un partenaire — chacun voyant les mêmes données en temps réel.</li>
+        </ul>
+    </section>
 
-            <h3>2.3 Guide de Navigation et d'Interface</h3>
-            <p>Expense mnAI utilise une barre de navigation flottante qui s'adapte à votre appareil.</p>
-            <div class="screenshot">📱 [CAPTURE : Navigation - Mobile Fermé vs Ouvert] <br>Vue annotée de la barre inférieure "pilule" et le résultat d'un appui sur le bouton menu sur iPhone.</div>
-            <p><strong>Sur iPhone (Portrait) :</strong> Une barre en forme de pilule flotte au bas de l'écran avec deux onglets fixes — Tableau de bord et Transactions — et un bouton Menu sur la droite. Appuyer sur le Menu ouvre un panneau de navigation plein écran avec accès à toutes les zones.</p>
-            <div class="screenshot">🖥️ [CAPTURE : Navigation - Barre latérale iPad] <br>Vue montrant comment la barre supérieure compacte s'étend en barre latérale sur iPad/Mac.</div>
-            <p><strong>Sur iPad et Mac :</strong> Une barre flottante compacte se trouve en haut. En appuyant sur l'icône de gauche, elle s'étend en une barre latérale complète affichant toutes les destinations de navigation. La barre latérale se ferme automatiquement lorsque vous sélectionnez une destination.</p>
-            <p><strong>Sections principales :</strong></p>
-            <table>
-                <thead><tr><th>Section</th><th>Ce que vous y trouverez</th></tr></thead>
-                <tbody>
-                    <tr><td>Tableau de bord</td><td>Valeur nette, flux de trésorerie mensuel, factures à venir, résumé du budget</td></tr>
-                    <tr><td>Transactions</td><td>Tous les revenus, dépenses et transferts pour l'espace actif</td></tr>
-                    <tr><td>Comptes</td><td>Vos comptes et leurs soldes</td></tr>
-                    <tr><td>Rapport mensuel</td><td>Analyses historiques mois par mois</td></tr>
-                    <tr><td>Analyse budgétaire</td><td>Décomposition visuelle de la performance budgétaire</td></tr>
-                    <tr><td>Intelligence</td><td>Analyses générées par IA sur les dépenses et les modèles</td></tr>
-                    <tr><td>Factures à venir</td><td>Factures dues dans les 30 prochains jours</td></tr>
-                    <tr><td>Budgets actifs</td><td>Suivi des budgets du mois en cours</td></tr>
-                    <tr><td>Factures récurrentes</td><td>Gestion des modèles de factures</td></tr>
-                    <tr><td>Budgets récurrents</td><td>Gestion des modèles de budgets</td></tr>
-                    <tr><td>Types de comptes</td><td>Gestion des étiquettes de types de comptes</td></tr>
-                    <tr><td>Catégories</td><td>Gestion de vos catégories de dépenses</td></tr>
-                    <tr><td>Groupes de catégories</td><td>Gestion des conteneurs de groupes</td></tr>
-                    <tr><td>Réglages</td><td>Devise, langue, apparence, abonnement</td></tr>
-                </tbody>
-            </table>
-        </section>
+    <section id="getting-started">
+        <h2>2. Prise en main</h2>
+        <h3>2.1 Configuration des espaces de travail</h3>
+        <p>Lorsque vous ouvrez Expense mnAI pour la première fois, un espace de travail personnel est créé automatiquement. C'est votre environnement financier privé — vous seul pouvez le voir, et il est stocké exclusivement dans votre compte iCloud personnel. Personne d'autre, pas même les personnes que vous inviterez plus tard dans un espace de travail partagé, ne verra jamais votre espace de travail personnel.</p>
+        <p><strong>Qu'est-ce qu'un espace de travail ?</strong><br>
+        Un espace de travail est un environnement financier autonome. Il possède ses propres comptes, catégories, transactions, budgets et factures. Considérez-le comme un ensemble de livres comptables séparés. Votre espace de travail personnel contient vos finances individuelles. Un espace de travail partagé peut contenir vos finances domestiques — les dépenses et les revenus que vous gérez avec quelqu'un d'autre.</p>
+        <p><strong>Création d'un espace de travail partagé</strong><br>
+        Les espaces de travail partagés nécessitent un plan de partage familial. Pour en créer un, appuyez sur le nom de l'espace de travail en haut de l'écran pour ouvrir le sélecteur d'espace de travail, puis appuyez sur "Créer un espace de travail partagé". Il vous sera demandé de lui donner un nom. Une fois créé, vous pouvez inviter d'autres personnes à le rejoindre — voir la section 10.4 pour le processus complet.</p>
+        <p><strong>Basculer entre les espaces de travail</strong><br>
+        Appuyez sur le nom de l'espace de travail ou sur l'avatar en haut de l'écran à tout moment pour voir vos espaces de travail disponibles et basculer de l'un à l'autre. L'application mémorise le dernier espace de travail que vous avez utilisé.</p>
 
-        <section id="accounts">
-            <h2>3. Comptes</h2>
-            <h3>3.1 Comprendre les types de comptes</h3>
-            <p>Un type de compte est une étiquette décrivant la nature du compte financier — Courant, Épargne, Carte de crédit, etc. Les types de comptes n'affectent pas les calculs ; ils servent à votre propre organisation et affichage. Expense mnAI est livré avec six types par défaut. Vous pouvez créer vos propres types personnalisés si aucun des standards ne convient — par exemple, "Portefeuille Crypto" ou "Fonds de pension".</p>
-            <h3>3.2 Création et gestion des comptes</h3>
-            <p>Les comptes sont les conteneurs financiers au sein d'un espace de travail. Chaque transaction doit être liée à au moins un compte — soit le compte d'où vient l'argent, soit le compte où il est allé, ou les deux dans le cas d'un transfert.</p>
-            <p><strong>Pour créer un compte :</strong> Naviguez vers "Comptes" dans le menu, appuyez sur le bouton +, saisissez un nom (ex: "Banque Principale"), choisissez un type de compte, saisissez éventuellement un solde d'ouverture et une date, puis appuyez sur Enregistrer.</p>
-            <p><strong>Modifier un compte :</strong> Appuyez sur le compte pour ouvrir sa vue détaillée, puis appuyez sur Modifier. Vous pouvez changer le nom, le type, les notes et le statut par défaut.</p>
-            <p><strong>Définir un compte principal :</strong> Un compte peut être marqué comme votre compte principal. Ce compte sera présélectionné lorsque vous ouvrirez l'écran de saisie de transaction, vous épargnant une étape de sélection.</p>
-            <p><strong>Désactiver un compte (Suppression douce) :</strong> Plutôt que de supprimer définitivement un compte ayant un historique de transactions, vous pouvez le marquer comme Inactif. Les comptes inactifs sont masqués des listes actives, mais leur historique de transactions est conservé pour des rapports précis.</p>
-            <h3>3.3 Soldes d'ouverture</h3>
-            <p>Lorsque vous ajoutez un compte existant à Expense mnAI, vous pouvez saisir le solde qu'il avait déjà à une date spécifique. C'est votre solde d'ouverture. Expense mnAI l'utilise comme point de départ et calcule le solde actuel en ajoutant les revenus et en soustrayant les dépenses à partir de cette date.</p>
-        </section>
+        <h3>2.2 Données par défaut et premier lancement</h3>
+        <p>Lors du premier lancement, Expense mnAI pré-remplit votre espace de travail personnel avec un ensemble de types de comptes, de groupes de catégories et de catégories par défaut. Ce sont des points de départ basés sur des modèles financiers courants — vous n'y êtes pas enfermé et pouvez tout ajouter, modifier ou supprimer, à l'exception des types de systèmes intégrés.</p>
+        <p><strong>Types de comptes par défaut :</strong> Espèces, Courant, Épargne, Carte de crédit, Investissement, Prêt.</p>
+        <p><strong>Groupes de catégories et catégories par défaut</strong></p>
+        <table>
+            <thead><tr><th>Groupe</th><th>Catégories</th></tr></thead>
+            <tbody>
+                <tr><td>Alimentation et Restauration</td><td>Courses, Sorties au restaurant</td></tr>
+                <tr><td>Transport</td><td>Carburant, Transports en commun</td></tr>
+                <tr><td>Logement</td><td>Loyer / Hypothèque</td></tr>
+                <tr><td>Services publics</td><td>Électricité, Internet</td></tr>
+                <tr><td>Divertissement</td><td>(Ajoutez vos propres catégories)</td></tr>
+                <tr><td>Salaire</td><td>Salaire de base, Bonus</td></tr>
+                <tr><td>Investissements</td><td>(Ajoutez vos propres catégories)</td></tr>
+                <tr><td>Freelance</td><td>(Ajoutez vos propres catégories)</td></tr>
+                <tr><td>Cadeaux</td><td>(Ajoutez vos propres catégories)</td></tr>
+                <tr><td>Autres Revenus</td><td>(Ajoutez vos propres catégories)</td></tr>
+            </tbody>
+        </table>
+        <p>Nous vous encourageons à ajouter des catégories qui reflètent votre vie réelle — qu'il s'agisse de "Frais scolaires", "Soins des animaux" ou "Activité complémentaire".</p>
 
-        <section id="categories-groups">
-            <h2>4. Catégories & Groupes</h2>
-            <h3>4.1 Comprendre le système de catégories</h3>
-            <p>Expense mnAI utilise un système à deux niveaux pour organiser vos transactions : <strong>Groupes</strong> et <strong>Catégories</strong>. Un groupe est un conteneur large — par exemple, "Alimentation & Restauration" ou "Transport". Une catégorie est un élément spécifique au sein d'un groupe — par exemple, "Courses" ou "Carburant". Chaque transaction peut se voir attribuer à la fois un groupe et une catégorie, vous donnant la possibilité de voir vos dépenses agrégées aux deux niveaux.</p>
-            <h3>4.2 Créer des groupes personnalisés</h3>
-            <p>Naviguez vers "Groupes de catégories", appuyez sur +, saisissez un nom, choisissez une icône, sélectionnez Dépense ou Revenu, puis enregistrez. Votre groupe apparaîtra à côté des standards.</p>
-            <h3>4.3 Créer des catégories personnalisées</h3>
-            <p>Naviguez vers "Catégories", appuyez sur +, saisissez un nom, choisissez une icône et sélectionnez à quel groupe cette catégorie appartient. Les catégories doivent appartenir à un groupe. Le groupe détermine le type de la catégorie (Dépense ou Revenu).</p>
-            <h3>4.4 Favoris</h3>
-            <p>Les catégories et groupes peuvent être marqués comme favoris. Les favoris apparaissent en haut de la liste de sélection lors de la saisie d'une transaction. Maintenez enfoncé n'importe quelle catégorie ou groupe et sélectionnez "Ajouter aux favoris".</p>
-        </section>
+        <h3>2.3 Guide de navigation et d'interface</h3>
+        <p>Expense mnAI utilise une barre de navigation flottante qui s'adapte à votre appareil.</p>
+        <div class="screenshot">📱 [CAPTURE D'ÉCRAN : Navigation - Mobile Fermé vs Ouvert] <br>Vue annotée montrant la barre inférieure en forme de pilule et le résultat de l'appui sur le bouton menu sur iPhone.</div>
+        <p><strong>Sur iPhone (portrait) :</strong> Une barre en forme de pilule flotte au bas de l'écran avec deux onglets fixes — Tableau de bord et Transactions — et un bouton menu sur la droite. Appuyer sur le bouton menu ouvre un panneau de navigation plein écran avec accès à toutes les sections.</p>
+        <div class="screenshot">🖥️ [CAPTURE D'ÉCRAN : Navigation - Barre latérale iPad] <br>Vue montrant la barre supérieure compacte s'étendant dans la barre latérale sur iPad/Mac.</div>
+        <p><strong>Sur iPad et Mac :</strong> Une barre flottante compacte se trouve en haut. Appuyer sur l'icône de gauche l'étend en une barre latérale complète montrant toutes les sections de navigation. La barre latérale se ferme automatiquement lorsque vous sélectionnez une destination.</p>
+        <p><strong>Sections principales :</strong></p>
+        <table>
+            <thead><tr><th>Section</th><th>Ce que vous y trouverez</th></tr></thead>
+            <tbody>
+                <tr><td>Tableau de bord</td><td>Valeur nette, flux de trésorerie mensuel, factures à venir, résumé du budget</td></tr>
+                <tr><td>Transactions</td><td>Tous les revenus, dépenses et transferts pour l'espace de travail actif</td></tr>
+                <tr><td>Comptes</td><td>Vos comptes et leurs soldes</td></tr>
+                <tr><td>Rapport mensuel</td><td>Répartitions historiques mois par mois</td></tr>
+                <tr><td>Analyse du budget</td><td>Répartition visuelle de la performance du budget</td></tr>
+                <tr><td>Intelligence</td><td>Aperçus et modèles de dépenses générés par l'IA</td></tr>
+                <tr><td>Factures à venir</td><td>Factures dues dans les 30 prochains jours</td></tr>
+                <tr><td>Budgets actifs</td><td>Suivi du budget du mois en cours</td></tr>
+                <tr><td>Factures récurrentes</td><td>Gérer les modèles de factures</td></tr>
+                <tr><td>Budgets récurrents</td><td>Gérer les modèles de budgets</td></tr>
+                <tr><td>Types de comptes</td><td>Gérer les étiquettes de type de compte</td></tr>
+                <tr><td>Catégories</td><td>Gérer vos catégories de dépenses</td></tr>
+                <tr><td>Groupes de catégories</td><td>Gérer les conteneurs de groupes</td></tr>
+                <tr><td>Réglages</td><td>Devise, langue, apparence, abonnement</td></tr>
+            </tbody>
+        </table>
+    </section>
 
-        <section id="transactions">
-            <h2>5. Transactions</h2>
-            <h3>5.1 Enregistrer une dépense</h3>
-            <p>Une dépense enregistre l'argent quittant l'un de vos comptes.</p>
-            <div class="screenshot">📸 [CAPTURE : Formulaire de transaction - Dépense] <br>Formulaire annoté avec les champs Montant, Payer depuis, Catégorie et Note.</div>
-            <p><strong>Pour ajouter une dépense :</strong> Appuyez sur le bouton + (visible sur le tableau de bord et l'écran des transactions), choisissez "Dépense", saisissez le montant, choisissez la date, sélectionnez le compte d'où vient l'argent ("Payer depuis"), choisissez un groupe et une catégorie, ajoutez éventuellement des notes/tags/reçus, puis enregistrez. Le solde du compte reflétera la déduction immédiatement.</p>
-            <h3>5.2 Enregistrer un revenu</h3>
-            <p>Les revenus enregistrent l'argent entrant sur l'un de vos comptes — un salaire, un paiement en freelance, un cadeau. Appuyez sur +, choisissez "Revenu", saisissez le montant, choisissez le compte où l'argent a été reçu ("Payer vers"), choisissez un groupe et une catégorie de revenus, et enregistrez.</p>
-            <h3>5.3 Transferts entre comptes</h3>
-            <div class="screenshot">🔄 [CAPTURE : Formulaire de transaction - Transfert] <br>Notez les deux sélecteurs de compte : 'Payer depuis' et 'Payer vers'.</div>
-            <p>Un transfert enregistre l'argent se déplaçant entre deux de vos propres comptes — par exemple, payer votre facture de carte de crédit depuis votre compte courant. Les transferts n'ont aucun impact sur votre valeur nette globale, mais affectent les soldes individuels des comptes.</p>
-            <h3>5.4 Joindre des reçus</h3>
-            <p>Vous pouvez joindre un reçu photo ou PDF à n'importe quelle transaction. Après avoir enregistré une transaction, ouvrez-la et appuyez sur "Ajouter un reçu". Les reçus sont stockés sur votre appareil et synchronisés avec vos autres données sur iCloud.</p>
-            <h3>5.5 Tags (Étiquettes)</h3>
-            <p>Les tags sont des étiquettes de texte libre que vous pouvez appliquer aux transactions pour permettre une organisation personnalisée en dehors du système groupe/catégorie (ex: "Vacances 2025").</p>
-        </section>
+    <section id="accounts">
+        <h2>3. Comptes</h2>
+        <h3>3.1 Comprendre les types de comptes</h3>
+        <p>Un type de compte est une étiquette qui décrit la nature d'un compte financier — courant, épargne, carte de crédit, etc. Les types de comptes n'affectent pas les calculs ; ils servent à votre propre organisation et affichage. Expense mnAI est livré avec six types de comptes par défaut : Espèces, Courant, Épargne, Carte de crédit, Investissement et Prêt. Vous pouvez créer vos propres types personnalisés si aucun des types par défaut ne correspond — par exemple "Portefeuille Crypto" ou "Fonds de prévoyance".</p>
+        <h3>3.2 Création et gestion des comptes</h3>
+        <p>Les comptes sont les conteneurs financiers à l'intérieur d'un espace de travail. Chaque transaction doit être liée à au moins un compte — soit le compte d'où l'argent provient, soit le compte où l'argent est allé, ou les deux dans le cas d'un transfert.</p>
+        <p><strong>Pour créer un compte :</strong> Accédez à Comptes depuis le menu, appuyez sur le bouton +, entrez un nom (ex. : "Épargne BNP"), sélectionnez un type de compte, saisissez éventuellement un solde d'ouverture et une date, puis appuyez sur Enregistrer.</p>
+        <p><strong>Modifier un compte :</strong> Appuyez sur le compte pour ouvrir sa vue détaillée, puis appuyez sur Modifier. Vous pouvez modifier le nom, le type, les notes et le réglage par défaut principal.</p>
+        <p><strong>Définir un compte principal :</strong> Un compte peut être marqué comme votre compte par défaut. Ce compte est pré-sélectionné lorsque vous ouvrez l'écran de saisie de transaction, vous épargnant un appui pour votre compte le plus courant.</p>
+        <p><strong>Suppression logicielle d'un compte :</strong> Plutôt que de supprimer définitivement un compte ayant des transactions historiques, vous pouvez le marquer comme inactif. Les comptes inactifs sont masqués des listes actives, mais leur historique de transactions est conservé pour des rapports précis.</p>
+        <h3>3.3 Soldes d'ouverture</h3>
+        <p>Lorsque vous ajoutez un compte existant à Expense mnAI, vous pouvez saisir le solde qu'il avait déjà à une date précise. C'est votre solde d'ouverture. Expense mnAI l'utilise comme point de départ et calcule le solde actuel en ajoutant les revenus et en soustrayant les dépenses à partir de cette date. Si vous configurez Expense mnAI pour la première fois et que vos comptes contiennent déjà de l'argent, réglez le solde d'ouverture sur le solde actuel à la date d'aujourd'hui.</p>
+    </section>
 
-        <section id="recurring-bills">
-            <h2>6. Factures Récurrentes</h2>
-            <h3>6.1 Fonctionnement</h3>
-            <p>Les factures récurrentes sont des modèles de transaction automatisés. Vous définissez une facture une fois, et Expense mnAI génère une entrée de facture en attente à chaque date d'échéance. Vous les vérifiez dans "Factures à venir" et les marquez comme payées une fois que l'argent a réellement quitté votre compte.</p>
-            <h3>6.2 Marquer comme payé</h3>
-            <div class="screenshot">✅ [CAPTURE : Liste des factures à venir] <br>Vue montrant les factures en attente avec l'action 'Marquer comme payé' mise en évidence.</div>
-            <p>Naviguez vers "Factures à venir". Les factures dues dans les 30 prochains jours sont listées. Appuyez sur une facture et choisissez "Marquer comme payé" pour confirmer le paiement. Une fois marquée, l'instance de facture crée une transaction correspondante dans votre historique.</p>
-        </section>
+    <section id="categories-groups">
+        <h2>4. Catégories et Groupes</h2>
+        <h3>4.1 Comprendre le système de catégories</h3>
+        <p>Expense mnAI utilise un système à deux niveaux pour organiser vos transactions : <strong>Groupes</strong> et <strong>Catégories</strong>. Un groupe est un conteneur large — par exemple "Alimentation et Restauration" ou "Transport". Une catégorie est un élément spécifique à l'intérieur d'un groupe — par exemple "Courses" ou "Carburant". Chaque transaction peut être affectée à la fois à un groupe et à une catégorie, vous permettant de voir vos dépenses résumées à l'un ou l'autre niveau.</p>
+        <p>Cette structure à deux niveaux signifie que vous pouvez voir "J'ai dépensé 14 000 € en Alimentation ce mois-ci" et aussi approfondir pour voir que "9 000 € étaient pour les courses et 5 000 € pour les sorties au restaurant". Les groupes sont également typés : un groupe est soit un groupe de Dépenses, soit un groupe de Revenus. Cela détermine comment les transactions qui lui sont assignées sont interprétées dans vos rapports.</p>
+        <h3>4.2 Création de groupes personnalisés</h3>
+        <p>Accédez à Groupes de catégories depuis le menu, appuyez sur le bouton +, entrez un nom, sélectionnez une icône dans la bibliothèque SF Symbols, choisissez Dépense ou Revenu, puis appuyez sur Enregistrer. Votre groupe personnalisé apparaîtra aux côtés des groupes par défaut et pourra être utilisé immédiatement.</p>
+        <h3>4.3 Création de catégories personnalisées</h3>
+        <p>Accédez à Catégories depuis le menu, appuyez sur le bouton +, entrez un nom, sélectionnez une icône, choisissez à quel groupe cette catégorie appartient, puis appuyez sur Enregistrer. Les catégories doivent appartenir à un groupe. Le groupe détermine le type de la catégorie (dépense ou revenu).</p>
+        <h3>4.4 Favoris</h3>
+        <p>Les catégories et les groupes peuvent être marqués comme favoris. Les favoris apparaissent en haut de la liste de sélection lorsque vous saisissez une transaction, ce qui rend vos choix les plus fréquents plus rapides à atteindre. Appuyez longuement sur n'importe quelle catégorie ou groupe et sélectionnez "Ajouter aux favoris".</p>
+    </section>
 
-        <section id="recurring-budgets">
-            <h2>7. Budgets Récurrents</h2>
-            <h3>7.1 Fonctionnement</h3>
-            <p>Les budgets récurrents sont des objectifs de dépenses qui se réinitialisent d'eux-mêmes. Vous définissez un budget une fois, et Expense mnAI génère automatiquement une nouvelle période budgétaire au début de chaque cycle. Aucun rafraîchissement manuel n'est nécessaire.</p>
-            <h3>7.2 Report (Carry-Forward)</h3>
-            <p>Si le report est activé, tout montant non dépensé à la fin d'une période est ajouté au budget de la période suivante.</p>
-            <h3>7.3 Suivi de la santé budgétaire</h3>
-            <div class="screenshot">📊 [CAPTURE : Indicateurs de santé budgétaire] <br>Représentation des barres de progression vertes (Sain), jaunes (Proche) et rouges (Hors budget).</div>
-            <p>La section "Budgets actifs" et le Tableau de bord affichent vos positions budgétaires actuelles avec des barres de progression colorées.</p>
-        </section>
+    <section id="transactions">
+        <h2>5. Transactions</h2>
+        <h3>5.1 Enregistrer une dépense</h3>
+        <p>Une dépense enregistre de l'argent quittant l'un de vos comptes.</p>
+        <div class="screenshot">📸 [CAPTURE D'ÉCRAN : Formulaire de transaction - Dépense] <br>Formulaire annoté montrant les champs Montant, Payer depuis, Catégorie et Note.</div>
+        <p><strong>Pour ajouter une dépense :</strong> Appuyez sur le bouton + (visible sur le tableau de bord et l'écran des transactions), sélectionnez "Dépense", entrez le montant, sélectionnez la date, choisissez le compte d'où l'argent provient ("Payer depuis"), sélectionnez un groupe et une catégorie, ajoutez éventuellement des notes/tags/reçu, puis appuyez sur Enregistrer. Le solde du compte reflétera immédiatement la déduction.</p>
+        <h3>5.2 Enregistrer un revenu</h3>
+        <p>Un revenu enregistre l'argent arrivant sur l'un de vos comptes — un salaire, un paiement en freelance, un cadeau en espèces ou tout autre flux entrant. Appuyez sur +, sélectionnez "Revenu", entrez le montant, choisissez le compte sur lequel l'argent est arrivé ("Payer vers"), sélectionnez un groupe et une catégorie de revenus, ajoutez des notes si nécessaire, puis appuyez sur Enregistrer.</p>
+        <h3>5.3 Transferts entre comptes</h3>
+        <div class="screenshot">🔄 [CAPTURE D'ÉCRAN : Formulaire de transaction - Transfert] <br>Légende pointant vers les doubles sélecteurs de compte : 'Payer depuis' et 'Payer vers'.</div>
+        <p>Un transfert enregistre l'argent se déplaçant entre deux de vos propres comptes — par exemple, payer votre facture de carte de crédit depuis votre compte courant. Appuyez sur +, sélectionnez "Transfert", entrez le montant, sélectionnez le compte source ("Payer depuis") et le compte de destination ("Payer vers"), sélectionnez la date, ajoutez des notes, puis appuyez sur Enregistrer. Les transferts n'affectent pas votre valeur nette totale, mais affectent les soldes individuels des comptes.</p>
+        <h3>5.4 Joindre des reçus</h3>
+        <p>Vous pouvez joindre une photo ou un reçu PDF à n'importe quelle transaction. Après avoir enregistré une transaction, ouvrez-la et appuyez sur "Ajouter un reçu". Vous pouvez prendre une nouvelle photo ou choisir une image existante dans votre photothèque. Les reçus sont stockés sur votre appareil et synchronisés sur iCloud avec vos autres données.</p>
+        <h3>5.5 Tags (Étiquettes)</h3>
+        <p>Les tags sont des étiquettes libres que vous pouvez appliquer aux transactions pour une organisation personnalisée en dehors du système groupe/catégorie. Par exemple, taguez plusieurs transactions comme "Vacances 2025" ou "Fournitures de bureau". Pour ajouter un tag, appuyez sur le champ Tags lors de la saisie ou de la modification d'une transaction et tapez un nouveau nom de tag ou sélectionnez-en un existant.</p>
+        <h3>5.6 Modification et suppression de transactions</h3>
+        <p>Appuyez sur n'importe quelle transaction dans la liste pour l'ouvrir. Depuis la vue détaillée, appuyez sur Modifier pour effectuer des changements. Pour supprimer une transaction, balayez vers la gauche sur celle-ci dans la liste et appuyez sur Supprimer, ou ouvrez la transaction et appuyez sur le bouton Supprimer. Les transactions supprimées sont définitivement retirées et ne peuvent pas être récupérées.</p>
+    </section>
 
-        <section id="reports-analytics">
-            <h2>8. Rapports & Analyses</h2>
-            <h3>8.1 Rapport mensuel</h3>
-            <p>Le rapport mensuel vous donne une analyse financière approfondie pour n'importe quel mois passé : revenus totaux, dépenses, flux de trésorerie net, et graphiques de dépenses par groupe.</p>
-            <h3>8.2 Analyse budgétaire</h3>
-            <p>L'analyse budgétaire fournit une vue historique de la performance de vos budgets sur plusieurs cycles, vous aidant à identifier les objectifs de budget trop hauts ou trop bas.</p>
-            <h3>8.3 Intelligence & Analyses</h3>
-            <p>La zone Intelligence utilise votre historique de transactions pour faire remonter automatiquement des modèles, des anomalies et des suggestions. Toutes les analyses sont générées localement sur votre appareil — aucune donnée n'est envoyée à un serveur.</p>
-        </section>
+    <section id="recurring-bills">
+        <h2>6. Factures récurrentes</h2>
+        <h3>6.1 Comment fonctionnent les factures récurrentes</h3>
+        <p>Les factures récurrentes sont des modèles de transaction automatisés. Vous définissez une facture une seule fois — son nom, son montant, sa fréquence, sa catégorie et son compte source — et Expense mnAI génère une entrée de facture en attente à chaque date d'échéance. Les factures sont d'abord générées dans un état "en attente". Vous les examinez dans Factures à venir et les marquez comme payées une fois que l'argent a réellement quitté votre compte.</p>
+        <h3>6.2 Création d'une facture récurrente</h3>
+        <p>Accédez à Factures récurrentes depuis le menu, appuyez sur le bouton +, entrez le nom de la facture, choisissez le type de transaction (Dépense ou Revenu), réglez la fréquence (Mensuelle, Hebdomadaire, Trimestrielle ou Annuelle), réglez la date de début, saisissez éventuellement un montant par défaut, assignez une catégorie/groupe/compte source, fixez éventuellement une date de fin, puis appuyez sur Enregistrer.</p>
+        <h3>6.3 Gestion des occurrences de factures</h3>
+        <p>Chaque occurrence générée est une instance de facture. Vous pouvez voir toutes les instances en ouvrant le modèle de facture récurrente. Modifiez une seule instance sans affecter le modèle en l'ouvrant et en modifiant son montant, sa date ou ses notes. Pour ignorer une instance (ex. : une facture qui n'a pas eu lieu), marquez-la comme ignorée plutôt que payée.</p>
+        <h3>6.4 Marquer les factures comme payées</h3>
+        <div class="screenshot">✅ [CAPTURE D'ÉCRAN : Liste des factures à venir] <br>Vue montrant les factures en attente avec l'action 'Marquer comme payé' en évidence.</div>
+        <p>Accédez à "Factures à venir" depuis le menu principal. Les factures dues dans les 30 prochains jours sont listées. Appuyez sur une facture et sélectionnez "Marquer comme payé" pour confirmer le paiement, en ajustant éventuellement le montant réel s'il différait du montant par défaut. Une fois marquée comme payée, l'instance de facture crée une transaction correspondante dans votre historique.</p>
+    </section>
 
-        <section id="sync-icloud">
-            <h2>9. Sync & iCloud</h2>
-            <h3>9.1 Aperçu des plans de synchronisation</h3>
-            <table>
-                <thead><tr><th>Plan</th><th>Ce que vous obtenez</th></tr></thead>
-                <tbody>
-                    <tr><td><strong>Gratuit</strong></td><td>Fonctions complètes de l'app sur un seul appareil. Stockage local uniquement. Pas de synchro iCloud.</td></tr>
-                    <tr><td><strong>Single Sync — Mensuel / Annuel</strong></td><td>Votre espace personnel se synchronise sur tous vos appareils Apple connectés au même compte iCloud.</td></tr>
-                    <tr><td><strong>Single Sync — À vie</strong></td><td>Idem que Single Sync, paiement unique.</td></tr>
-                    <tr><td><strong>Partage familial — Mensuel / Annuel</strong></td><td>Tout le contenu de Single Sync plus la possibilité de créer des espaces partagés et d'inviter d'autres personnes.</td></tr>
-                    <tr><td><strong>Partage familial — À vie</strong></td><td>Idem que Partage familial, paiement unique.</td></tr>
-                </tbody>
-            </table>
-            <h3>9.2 Synchronisation multi-appareils</h3>
-            <p>Avec un plan actif, votre espace personnel se synchronise automatiquement. Les modifications sont téléchargées en quelques secondes ; les autres appareils téléchargent les changements en 30 à 60 secondes.</p>
-            <h3>9.3 Restaurer les achats</h3>
-            <p>Pour restaurer votre abonnement après une réinstallation, allez dans Réglages → Abonnement & Plan → Restaurer les achats.</p>
-        </section>
+    <section id="recurring-budgets">
+        <h2>7. Budgets récurrents</h2>
+        <h3>7.1 Comment fonctionnent les budgets</h3>
+        <p>Les budgets récurrents sont des objectifs de dépenses qui se réinitialisent d'eux-mêmes. Vous définissez un budget une seule fois — son nom, son montant, sa fréquence et les catégories ou groupes qu'il couvre — et Expense mnAI génère automatiquement une nouvelle période budgétaire au début de chaque cycle. Aucune réinitialisation manuelle n'est requise.</p>
+        <h3>7.2 Création d'un budget</h3>
+        <p>Accédez à Budgets récurrents depuis le menu, appuyez sur +, entrez un nom, réglez la fréquence (Mensuelle, Hebdomadaire, Trimestrielle), entrez le montant du budget, réglez la date de début (généralement le 1er du mois en cours), assignez la portée (un ou plusieurs groupes de catégories ou catégories spécifiques ; laissez vide pour appliquer à toutes les dépenses), activez le Report de solde si vous le souhaitez, puis appuyez sur Enregistrer.</p>
+        <h3>7.3 Report de solde (Carry-Forward)</h3>
+        <p>Lorsque le report de solde est activé, tout montant non dépensé à la fin d'une période est ajouté au budget de la période suivante. Par exemple, si votre budget Alimentation est de 12 000 € et que vous n'en avez dépensé que 9 000 €, le mois suivant commence avec 15 000 € (12 000 € de base + 3 000 € reportés).</p>
+        <h3>7.4 Suivi de la santé du budget</h3>
+        <div class="screenshot">📊 [CAPTURE D'ÉCRAN : Indicateurs de santé du budget] <br>Présentation des barres de progression Vert (Sain), Orange (Approche de la limite) et Rouge (Dépassement du budget).</div>
+        <p>La section "Budgets actifs" et le tableau de bord affichent vos positions budgétaires actuelles : montant alloué, dépensé jusqu'à présent, solde restant et une barre de progression à code couleur. L'analyse du budget (section 8.2) donne une vue historique complète.</p>
+    </section>
 
-        <section id="workspaces-collaboration">
-            <h2>10. Espaces & Collaboration</h2>
-            <h3>10.1 Aperçu des espaces</h3>
-            <p>Un espace de travail est un environnement financier totalement isolé. Expense mnAI en supporte deux types : <strong>Espace Personnel</strong> (privé) et <strong>Espaces Partagés</strong> (collaboratifs).</p>
-            <h3>10.2 Inviter d'autres personnes à collaborer</h3>
-            <div class="screenshot">✉️ [CAPTURE : Inviter des collaborateurs] <br>La feuille de partage iCloud qui apparaît après avoir appuyé sur l'icône de partage.</div>
-            <p>Nécessite un plan de Partage familial. Pour envoyer une invitation : Ouvrez le sélecteur d'espace, appuyez sur l'icône de partage à côté de l'espace partagé. Partagez le lien d'invitation via Messages, Mail, AirDrop, etc.</p>
-            <h3>10.3 Accepter une invitation</h3>
-            <p>Ouvrez le lien d'invitation sur votre appareil Apple. Une invite système apparaîtra. Vous n'avez pas besoin d'un plan payant pour rejoindre un espace partagé en tant qu'invité.</p>
-        </section>
+    <section id="reports-analytics">
+        <h2>8. Rapports et Analyses</h2>
+        <h3>8.1 Rapport mensuel</h3>
+        <div class="screenshot">📈 [CAPTURE D'ÉCRAN : Aperçu du rapport mensuel] <br>Vue du tableau de bord remplie avec le graphique en anneau de la répartition par catégorie.</div>
+        <p>Le rapport mensuel vous donne une ventilation financière détaillée pour n'importe quel mois passé. Accédez-y depuis le menu principal sous "Rapport mensuel". Il affiche : Revenus totaux, Dépenses totales, Flux de trésorerie net, Dépenses par groupe (graphique visuel), Dépenses par catégorie, Soldes des comptes à la fin du mois et Principales dépenses. Utilisez les flèches de navigation pour vous déplacer entre les mois passés.</p>
+        <h3>8.2 Analyse du budget</h3>
+        <p>L'analyse du budget offre une vue historique de la performance de vos budgets récurrents. Pour chaque budget, vous pouvez voir la performance période par période (au-dessus/en-dessous), la dépense moyenne par rapport à l'objectif, les meilleurs et les pires mois, ainsi qu'une courbe de tendance. Cela aide à identifier les objectifs budgétaires fixés trop haut ou trop bas et à repérer les dérives de dépenses.</p>
+        <h3>8.3 Intelligence et Aperçus</h3>
+        <p>La section Intelligence utilise votre historique de transactions pour faire ressortir automatiquement des modèles, des anomalies et des suggestions. Elle analyse les habitudes de dépenses, la tendance de la valeur nette, les jours de dépenses les plus importants, la dérive des catégories, les prévisions de flux de trésorerie et fournit un résumé hebdomadaire (nécessite l'autorisation de notification). Tous les aperçus sont générés localement sur votre appareil — aucune donnée n'est envoyée à un serveur.</p>
+    </section>
 
-        <section id="privacy-security">
-            <h2>11. Confidentialité & Sécurité</h2>
-            <ul>
-                <li><strong>Stockage local :</strong> Les données sont sur votre appareil dans une base SQLite cryptée.</li>
-                <li><strong>Synchro iCloud :</strong> Les données transitent par les serveurs iCloud d'Apple avec un cryptage de bout en bout.</li>
-                <li><strong>Accès développeur :</strong> Impossible. Aucun portail d'administration ni export de base de données n'existe pour nous.</li>
-                <li><strong>Pas de publicité :</strong> L'application ne contient aucun SDK publicitaire.</li>
-            </ul>
-        </section>
+    <section id="sync-icloud">
+        <h2>9. Synchronisation et iCloud</h2>
+        <h3>9.1 Aperçu des plans de synchronisation</h3>
+        <table>
+            <thead><tr><th>Plan</th><th>Ce que vous obtenez</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Gratuit</strong></td><td>Fonctionnalités complètes de l'application sur un seul appareil. Stockage local uniquement. Pas de synchronisation iCloud.</td></tr>
+                <tr><td><strong>Single Sync — Mensuel / Annuel</strong></td><td>Votre espace de travail personnel se synchronise sur tous vos appareils Apple connectés au même compte iCloud.</td></tr>
+                <tr><td><strong>Single Sync — À vie</strong></td><td>Identique à Single Sync, payé une seule fois, sans frais récurrents.</td></tr>
+                <tr><td><strong>Partage Familial — Mensuel / Annuel</strong></td><td>Tout ce qui est inclus dans Single Sync plus la possibilité de créer des espaces de travail partagés et d'inviter d'autres personnes.</td></tr>
+                <tr><td><strong>Partage Familial — À vie</strong></td><td>Identique au Partage Familial, payé une seule fois.</td></tr>
+            </tbody>
+        </table>
+        <h3>9.2 Choisir le bon plan</h3>
+        <p><strong>Gratuit</strong> – un seul appareil.<br>
+        <strong>Single Sync</strong> – plusieurs appareils Apple pour votre espace de travail personnel.<br>
+        <strong>Partage Familial</strong> – fonctionnalités Single Sync plus espaces de travail partagés avec d'autres.<br>
+        <strong>Plans à vie</strong> – mêmes fonctionnalités que les plans mensuels/annuels, paiement unique.</p>
+        <h3>9.3 Synchronisation multi-appareils</h3>
+        <p>Avec un plan Single Sync ou Partage Familial actif, votre espace de travail personnel est automatiquement maintenu synchronisé sur tous les appareils Apple connectés au même compte iCloud. Les modifications sont téléchargées en quelques secondes ; les autres appareils téléchargent les modifications dans les 30 à 60 secondes. Résolution des conflits : la version modifiée la plus récemment l'emporte.</p>
+        <h3>9.4 Ajouter un nouvel appareil</h3>
+        <p>Installez l'application sur un nouvel appareil, connectez-vous au même compte iCloud, achetez (ou restaurez) votre plan. Une fois votre abonnement confirmé, le nouvel appareil télécharge automatiquement vos données existantes depuis iCloud. En une minute ou deux, tous vos comptes, transactions, budgets et factures apparaissent.</p>
+        <h3>9.5 Restauration des achats</h3>
+        <p>Pour restaurer votre abonnement après une réinstallation ou sur un nouvel appareil, allez dans Réglages → Abonnement et Plan → Restaurer les achats, puis connectez-vous avec votre identifiant Apple si vous y êtes invité. Les plans à vie sont réactivés sur n'importe quel appareil connecté au même identifiant Apple. Si la synchronisation ne s'active pas après la restauration, déconnectez-vous d'iCloud et reconnectez-vous, puis réessayez de restaurer les achats.</p>
+    </section>
 
-        <section id="faq">
-            <h2>12. Questions Fréquentes (FAQ)</h2>
-            <p><strong>Puis-je utiliser Expense mnAI sans connexion internet ?</strong><br>Oui. Les fonctions de base travaillent hors ligne. Les changements se synchroniseront lors de votre prochaine connexion.</p>
-            <p><strong>L'application fonctionne-t-elle sur Mac ?</strong><br>Oui, elle est disponible sur Mac via Mac Catalyst.</p>
-            <p><strong>Qu'advient-il de mes données si j'annule mon abonnement ?</strong><br>Vos données restent sur votre appareil. Vous perdez l'accès à la synchronisation, mais vos données existantes ne sont pas supprimées.</p>
-            <p><strong>Puis-je avoir plusieurs espaces personnels ?</strong><br>Non. L'espace personnel est unique par compte iCloud. Vous pouvez créer plusieurs espaces partagés à la place.</p>
-            <p><strong>Mes transactions ne se synchronisent pas. Que faire ?</strong><br>Vérifiez votre connexion, votre identifiant iCloud et l'état de votre abonnement. Essayez d'activer/désactiver le mode avion.</p>
-            <p><strong>Deux personnes peuvent-elles partager un espace personnel ?</strong><br>Non. Ils sont privés par conception. Créez un espace partagé pour collaborer.</p>
-            <p><strong>Y a-t-il une limite au nombre de transactions ?</strong><br>Non. Il n'y a aucune limite artificielle.</p>
-            <p><strong>Expense mnAI supporte-t-il plusieurs devises ?</strong><br>Oui. Chaque espace a son propre réglage de devise.</p>
-            <p><strong>Comment contacter le support ?</strong><br>Allez dans Réglages → Aide & Support dans l'application.</p>
-        </section>
+    <section id="workspaces-collaboration">
+        <h2>10. Espaces de travail et Collaboration</h2>
+        <h3>10.1 Aperçu de l'espace de travail</h3>
+        <div class="screenshot">🏠 [CAPTURE D'ÉCRAN : Sélecteur d'espace de travail] <br>Montrant le point d'entrée de navigation supérieur et la liste des espaces de travail disponibles (Personnel + Partagé).</div>
+        <p>Un espace de travail est un environnement financier complètement isolé. Expense mnAI prend en charge deux types : <strong>Espace de travail personnel</strong> (privé, stocké dans votre base de données iCloud privée) et <strong>Espaces de travail partagés</strong> (collaboratifs, stockés dans une base de données iCloud partagée). Basculez entre les espaces de travail à tout moment à partir du sélecteur d'espace de travail (appuyez sur le nom/avatar de l'espace de travail en haut de l'écran).</p>
+        <h3>10.2 Espace de travail personnel</h3>
+        <p>Votre espace de travail personnel est créé automatiquement au premier lancement (identifié par une icône de fleur). Il est stocké exclusivement dans votre base de données iCloud privée. Les autres personnes que vous invitez dans des espaces de travail partagés n'ont aucun accès à votre espace de travail personnel. Il ne peut pas être supprimé, renommé ou transféré.</p>
+        <h3>10.3 Espaces de travail partagés</h3>
+        <p>Les espaces de travail partagés nécessitent un plan de Partage Familial. Ils servent à suivre ensemble les revenus/dépenses du foyer, à gérer des budgets communs ou à partager des factures. Tous les membres invités voient les mêmes données en temps réel et disposent d'un accès complet en lecture/écriture. Si le plan familial du propriétaire expire, l'espace de travail reste visible pour les participants jusqu'à ce que le partage soit explicitement révoqué.</p>
+        <h3>10.4 Inviter d'autres personnes à collaborer</h3>
+        <div class="screenshot">✉️ [CAPTURE D'ÉCRAN : Inviter des collaborateurs] <br>La feuille de partage iCloud apparaissant après avoir appuyé sur l'icône de partage.</div>
+        <p><strong>Conditions :</strong> Plan de Partage Familial, espace de travail déjà synchronisé sur iCloud. Pour envoyer une invitation : ouvrez le sélecteur d'espace de travail, appuyez sur l'icône de partage à côté de l'espace de travail partagé (ou ouvrez les réglages de l'espace de travail → "Inviter des personnes"). La feuille de partage iCloud apparaît ; partagez le lien d'invitation via Messages, Mail, AirDrop, etc. Le destinataire appuie sur le lien et accepte l'invite système pour rejoindre.</p>
+        <h3>10.5 Accepter une invitation à un espace de travail</h3>
+        <p>Ouvrez le lien d'invitation sur votre iPhone, iPad ou Mac avec Expense mnAI installé. Une invite système "Rejoindre [Nom de l'espace de travail] ?" apparaît. Appuyez sur Accepter. L'espace de travail apparaîtra dans votre sélecteur d'espace de travail en quelques secondes. S'il n'apparaît pas immédiatement, fermez et rouvrez l'application et attendez jusqu'à une minute. Vous n'avez pas besoin d'un plan payant pour participer à un espace de travail partagé.</p>
+        <h3>10.6 Gestion des collaborateurs</h3>
+        <p>Le propriétaire de l'espace de travail peut supprimer un collaborateur en ouvrant la feuille de partage depuis le sélecteur d'espace de travail, en appuyant sur le nom du participant et en sélectionnant "Supprimer l'accès". Le participant perdra l'accès immédiatement. Un participant peut quitter un espace de travail partagé en ouvrant la feuille de partage et en appuyant sur "Arrêter de participer".</p>
+    </section>
 
-        <p style="text-align: center; margin-top: 80px; font-size: 13px; color: var(--secondary);">Expense mnAI — Votre architecte financier, sécurisé et privé.</p>
-    </div>
+    <section id="privacy-security">
+        <h2>11. Confidentialité et Sécurité</h2>
+        <p>Expense mnAI est entièrement construit sur l'infrastructure de sécurité d'Apple. Aucun serveur de l'entreprise Expense mnAI n'est impliqué dans le stockage ou la transmission de vos données financières.</p>
+        <ul>
+            <li><strong>Stockage local :</strong> Les données du plan gratuit résident exclusivement sur votre appareil dans une base de données SQLite cryptée.</li>
+            <li><strong>Synchronisation iCloud :</strong> Lorsque la synchronisation est activée, les données sont transmises via les serveurs iCloud d'Apple avec un cryptage en transit et au repos.</li>
+            <li><strong>Accès développeur :</strong> Les développeurs n'ont aucun mécanisme pour lire vos données. Pas de portail d'administration, pas d'exportation de base de données, pas de pipeline d'analyse.</li>
+            <li><strong>Pas de publicité :</strong> L'application ne contient aucun SDK publicitaire et ne participe à aucun système de ciblage ou de reciblage publicitaire.</li>
+            <li><strong>Changements de compte iCloud :</strong> Si vous vous déconnectez d'iCloud et vous connectez en tant qu'utilisateur différent, l'application détecte le changement et efface la base de données locale pour protéger les données de l'utilisateur précédent.</li>
+        </ul>
+    </section>
+
+    <section id="faq">
+        <h2>12. Questions Fréquemment Posées</h2>
+        <p><strong>Puis-je utiliser Expense mnAI sans connexion Internet ?</strong><br>Oui. Toutes les fonctionnalités de base fonctionnent pleinement hors ligne. Les modifications se synchronisent avec vos autres appareils lors de votre prochaine connexion.</p>
+        <p><strong>L'application fonctionne-t-elle sur Mac ?</strong><br>Oui. Expense mnAI est disponible sur Mac via Mac Catalyst et se comporte de manière cohérente avec l'expérience iPhone et iPad.</p>
+        <p><strong>Qu'advient-il de mes données si j'annule mon abonnement ?</strong><br>Vos données restent sur votre appareil. Vous perdez l'accès à la synchronisation, mais vos données existantes ne sont pas supprimées.</p>
+        <p><strong>Qu'advient-il d'un espace de travail partagé si le propriétaire annule son plan familial ?</strong><br>L'espace de travail partagé reste accessible aux participants via l'infrastructure de partage iCloud tant qu'Apple maintient le partage.</p>
+        <p><strong>Puis-je avoir plusieurs espaces de travail personnels ?</strong><br>Non. L'espace de travail personnel est unique — un par compte iCloud. Vous pouvez créer plusieurs espaces de travail partagés à la place.</p>
+        <p><strong>Mes transactions ne se synchronisent pas. Que dois-je essayer ?</strong><br>Vérifiez votre connexion Internet, vérifiez votre connexion iCloud et assurez-vous que votre abonnement est actif dans les réglages de l'application. Essayez d'activer et de désactiver le mode avion pour forcer une tentative de synchronisation. Si le problème persiste, contactez l'assistance.</p>
+        <p><strong>Deux personnes peuvent-elles partager un espace de travail personnel ?</strong><br>Non. Les espaces de travail personnels sont privés par conception. Créez un espace de travail partagé pour les données collaboratives.</p>
+        <p><strong>Y a-t-il une limite au nombre de transactions que je peux ajouter ?</strong><br>Non. Il n'y a pas de limite artificielle au nombre de transactions, de comptes ou de catégories.</p>
+        <p><strong>Expense mnAI prend-il en charge plusieurs devises ?</strong><br>Oui. Chaque espace de travail a son propre réglage de devise. Les rapports multi-devises entre espaces de travail ne sont pas pris en charge actuellement.</p>
+        <p><strong>Comment contacter l'assistance ?</strong><br>Accédez à Réglages → Aide et Assistance, ou visitez la page d'assistance liée dans l'App Store. Veuillez inclure votre modèle d'appareil et votre version d'iOS lors du signalement d'un problème.</p>
+    </section>
+
+    <p style="text-align: center; margin-top: 80px; font-size: 13px; color: var(--secondary);">Expense mnAI — Votre architecte financier, sécurisé et privé.</p>
 </div>
-</body>
-</html>
+```
+
+\</div\>
+\</body\>
+\</html\>
