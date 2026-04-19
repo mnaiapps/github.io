@@ -1,88 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - MNAi Expense Tracker</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      line-height: 1.6;
-    }
-    h1, h2 {
-      margin-top: 24px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Expense mnAI</title>
+    <style>
+        /* System fonts for native iOS feel */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1c1c1e;
+            background-color: #ffffff;
+            padding: 24px 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 1px solid #e5e5ea;
+            padding-bottom: 0.3rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #007aff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: #8e8e93;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        /* Dark Mode Support for iOS WebView */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #000000;
+                color: #f2f2f7;
+            }
+            
+            h2 {
+                border-bottom: 1px solid #38383a;
+            }
+
+            .last-updated {
+                color: #8e8e93;
+            }
+
+            a {
+                color: #0a84ff;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<h1>Privacy Policy</h1>
+    <h1>Privacy Policy for Expense mnAI : Expense Tracker</h1>
+    <p class="last-updated">Last Updated: April 20, 2026</p>
 
-<p>Last updated: 2026</p>
+    <p>At mnAI, we believe your financial data is exclusively yours. Our business model is based on providing a premium software experience through subscriptions, not by harvesting, analyzing, or selling your personal information.</p>
+    
+    <p>This Privacy Policy explains how mnAI handles your data. The short version is: <strong>We do not collect, store, or have access to your financial data.</strong></p>
 
-<h2>Overview</h2>
-<p>
-MNAi Expense Tracker is designed with privacy as a core principle. Your financial data is stored securely and is never accessed, collected, or sold by the developers.
-</p>
+    <h2>1. Information We Do Not Collect</h2>
+    <p>mnAI is built with a "Zero Developer Access" architecture. We do not have user accounts, we do not have our own servers, and we do not use third-party analytics or advertising SDKs. Therefore, we do not collect, transmit, or store:</p>
+    <ul>
+        <li>Your transactions, account balances, or financial history.</li>
+        <li>Your custom categories, budgets, or bills.</li>
+        <li>Your name, email address, or phone number.</li>
+        <li>Your location or device identifiers for tracking purposes.</li>
+    </ul>
 
-<h2>Data Storage</h2>
-<p>
-All your data is stored locally on your device and optionally synced securely using Apple iCloud.
-</p>
+    <h2>2. How Your Data is Stored and Synced</h2>
+    <p><strong>Local Storage:</strong> If you use the Free plan or have iCloud sync disabled, your financial data is stored locally in an encrypted database directly on your device.</p>
+    <p><strong>iCloud Sync:</strong> If you use our premium sync features, your data is securely synchronized using Apple’s CloudKit infrastructure. Your data is stored in your personal, private iCloud database. We cannot see, access, or decrypt this data. Its transmission and storage are governed strictly by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple’s Privacy Policy</a>.</p>
 
-<ul>
-  <li>Data is encrypted by Apple</li>
-  <li>Stored in your personal iCloud account</li>
-  <li>Not accessible by the developer</li>
-</ul>
+    <h2>3. Shared Workspaces & Collaboration</h2>
+    <p>If you use the Family Sharing plan to create Shared Workspaces, that specific workspace data is stored in a shared iCloud database. This allows the people you explicitly invite (via their Apple ID) to view and edit the data. You are solely responsible for who you invite to your Shared Workspaces. mnAI developers still have zero access to this shared data.</p>
 
-<h2>No Data Collection</h2>
-<p>
-We do not collect, store, or track any personal or financial data.
-</p>
+    <h2>4. Subscriptions and Payments</h2>
+    <p>All payments, subscriptions, and refunds are processed securely by Apple via the App Store. mnAI does not collect or have access to your credit card information, billing address, or payment details. We only receive an anonymous receipt from Apple confirming whether you have an active subscription so the app can unlock premium features.</p>
 
-<h2>No Third-Party Tracking</h2>
-<p>
-This app does not use:
-</p>
-<ul>
-  <li>Analytics SDKs</li>
-  <li>Advertising frameworks</li>
-  <li>Tracking tools</li>
-</ul>
+    <h2>5. Intelligence and Analytics</h2>
+    <p>All "Intelligence" features, insights, and automated anomaly detections are processed strictly on-device using local algorithms. None of your data is sent to the cloud or any AI server for processing.</p>
 
-<h2>iCloud Sync</h2>
-<p>
-If you enable sync, your data is securely transmitted using Apple’s CloudKit infrastructure.
-</p>
+    <h2>6. Changes to This Privacy Policy</h2>
+    <p>We may update our Privacy Policy from time to time. If we make significant changes, we will update the "Last Updated" date at the top of this policy and notify you within the app.</p>
 
-<h2>Sharing</h2>
-<p>
-If you use shared workspaces, your data is shared only with users you explicitly invite via iCloud.
-</p>
-
-<h2>Your Control</h2>
-<p>
-You have full control over your data:
-</p>
-<ul>
-  <li>Delete data anytime</li>
-  <li>Disable iCloud sync anytime</li>
-  <li>Revoke shared access anytime</li>
-</ul>
-
-<h2>Changes</h2>
-<p>
-We may update this policy from time to time. Updates will be reflected on this page.
-</p>
-
-<h2>Contact</h2>
-<p>
-For any questions, contact us via the App Store support link.
-</p>
+    <h2>7. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us at: <a href="mailto:mnAIapps@gmail.com">mnAIapps@gmail.com</a></p>
 
 </body>
 </html>
