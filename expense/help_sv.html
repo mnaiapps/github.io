@@ -1,20 +1,19 @@
-\<\!DOCTYPE html\>
-
-\<html lang="sv"\>
-\<head\>
-\<meta charset="UTF-8"\>
-\<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"\>
-\<title\>Expense mnAI - Komplett användarguide\</title\>
-\<style\>
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<title>Expense mnAI - Komplett användarguide</title>
+<style>
 :root {
-\--bg: \#f2f2f7; --card: \#ffffff; --text: \#1c1c1e; --secondary: \#636366;
-\--accent: \#007aff; --border: \#e5e5ea; --tip-bg: rgba(0, 122, 255, 0.05);
-\--tip-border: \#007aff; --code-bg: \#f8f8f8;
+--bg: #f2f2f7; --card: #ffffff; --text: #1c1c1e; --secondary: #636366;
+--accent: #007aff; --border: #e5e5ea; --tip-bg: rgba(0, 122, 255, 0.05);
+--tip-border: #007aff; --code-bg: #f8f8f8;
 }
 @media (prefers-color-scheme: dark) {
 :root {
-\--bg: \#000000; --card: \#1c1c1e; --text: \#ffffff; --secondary: \#8e8e93;
-\--accent: \#0a84ff; --border: \#38383a; --code-bg: \#2c2c2e;
+--bg: #000000; --card: #1c1c1e; --text: #ffffff; --secondary: #8e8e93;
+--accent: #0a84ff; --border: #38383a; --code-bg: #2c2c2e;
 }
 }
 body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 0; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
@@ -28,6 +27,8 @@ strong { font-weight: 600; color: var(--text); }
 .note { background: var(--tip-bg); border-left: 5px solid var(--tip-border); padding: 24px; border-radius: 12px; margin: 32px 0; font-size: 15px; }
 .note h5 { margin: 0 0 8px 0; color: var(--tip-border); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
 .screenshot { background: var(--bg); border: 1px dashed var(--border); border-radius: 16px; padding: 40px; text-align: center; color: var(--secondary); font-style: italic; margin: 30px 0; font-size: 14px; }
+.hero-image { width: 100%; height: auto; border-radius: 20px; margin: 10px 0 30px 0; border: 1px solid var(--border); box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+.img-caption { text-align: center; color: var(--secondary); font-size: 14px; font-style: italic; margin-top: -20px; margin-bottom: 30px; }
 table { width: 100%; border-collapse: collapse; margin: 32px 0; background: var(--bg); border-radius: 12px; overflow: hidden; font-size: 15px; }
 th, td { text-align: left; padding: 14px; border-bottom: 1px solid var(--border); }
 th { font-size: 12px; text-transform: uppercase; color: var(--secondary); letter-spacing: 0.5px; background: rgba(0,0,0,0.02); }
@@ -37,14 +38,13 @@ th { font-size: 12px; text-transform: uppercase; color: var(--secondary); letter
 .toc li { margin-bottom: 6px; font-size: 14px; }
 .toc a { text-decoration: none; color: var(--accent); font-weight: 500; }
 @media (max-width: 600px) { h1 { font-size: 32px; } .content-card { padding: 30px 20px; border-radius: 0; border: 0; } .container { padding: 0; } .toc ul { grid-template-columns: 1fr; } }
-\</style\>
-\</head\>
-\<body\>
-\<div class="container"\>
-\<div class="content-card"\>
-\<h1\>Expense mnAI<br>\<span style="color: var(--secondary); font-weight: 500;"\>Komplett användarguide\</span\>\</h1\>
+</style>
+</head>
+<body>
+<div class="container">
+<div class="content-card">
+<h1>Expense mnAI<br><span style="color: var(--secondary); font-weight: 500;">Komplett användarguide</span></h1>
 
-```
     <nav class="toc">
         <h4>Hoppa till avsnitt</h4>
         <ul>
@@ -65,6 +65,9 @@ th { font-size: 12px; text-transform: uppercase; color: var(--secondary); letter
 
     <section id="introduction">
         <h2>1. Introduktion</h2>
+        
+        <img src="assets/infographic-sv.jpg" alt="Expense mnAI Översikt" class="hero-image" onerror="this.onerror=null;this.src='assets/infographic-en.jpg';">
+
         <p>Expense mnAI är en intelligent, integritetsfokuserad ekonomihanterare designad exklusivt för Apple-enheter. Den är byggd för att ge dig en komplett bild av ditt ekonomiska liv — dina inkomster, utgifter, återkommande åtaganden och budgethälsa — utan att någonsin dela dina data med annonsörer, tredje parts analystjänster eller någon extern server utanför Apples iCloud-infrastruktur.</p>
         <h3>Vad Expense mnAI gör</h3>
         <p>Expense mnAI spårar pengarna som kommer in, går ut och rör sig mellan dina konton. Den förstår skillnaden mellan en löneutbetalning, ett matinköp och en kreditkortsbetalning, och organiserar dem så att du kan förstå var dina pengar faktiskt tar vägen varje månad.</p>
@@ -112,9 +115,15 @@ th { font-size: 12px; text-transform: uppercase; color: var(--secondary); letter
 
         <h3>2.3 Gränssnitt och navigeringsguide</h3>
         <p>Expense mnAI använder en flytande navigeringsfält som anpassar sig till din enhet.</p>
-        <div class="screenshot">📱 [SCREENSHOT: Navigering - Mobil stängd mot öppen] <br>Annoterad vy som visar den pillerformade bottenfältet och resultatet av att trycka på menyknappen på iPhone.</div>
+        
+        <img src="assets/help2.3.1-en.jpg" alt="Navigering - Mobil stängd mot öppen" class="hero-image" onerror="this.onerror=null;this.src='assets/help2.3.1-en.jpg';">
+        <div class="img-caption">📱 Annoterad vy som visar den pillerformade bottenfältet och resultatet av att trycka på menyknappen på iPhone.</div>
+        
         <p><strong>På iPhone (Porträtt):</strong> En pillerformad rad flyter längst ner på skärmen med två fasta flikar — Kontrollpanel och Transaktioner — och en menyknapp till höger. Genom att trycka på menyknappen öppnas en navigeringspanel i helskärm med tillgång till alla avsnitt.</p>
-        <div class="screenshot">🖥️ [SCREENSHOT: Navigering - iPad sidofält] <br>Vy av den kompakta toppraden som expanderar till ett sidofält på iPad/Mac.</div>
+        
+        <img src="assets/help2.3.2-en.jpg" alt="Navigering - iPad sidofält" class="hero-image" onerror="this.onerror=null;this.src='assets/help2.3.2-en.jpg';">
+        <div class="img-caption">🖥️ Vy av den kompakta toppraden som expanderar till ett sidofält på iPad/Mac.</div>
+        
         <p><strong>På iPad och Mac:</strong> En kompakt flytande rad sitter högst upp. Genom att trycka på ikonen till vänster expanderar den till ett fullständigt sidofält som visar alla navigeringsavsnitt. Sidofältet stängs automatiskt när du väljer en destination.</p>
         <p><strong>Huvudavsnitt:</strong></p>
         <table>
@@ -169,12 +178,18 @@ th { font-size: 12px; text-transform: uppercase; color: var(--secondary); letter
         <h2>5. Transaktioner</h2>
         <h3>5.1 Registrera en utgift</h3>
         <p>En utgift registrerar pengar som lämnar ett av dina konton.</p>
-        <div class="screenshot">📸 [SCREENSHOT: Transaktionsformulär - Utgift] <br>Annoterat formulär som visar fälten Belopp, Betala från, Kategori och Anteckning.</div>
+        
+        <img src="assets/help5.1-en.jpg" alt="Transaktionsformulär - Utgift" class="hero-image" onerror="this.onerror=null;this.src='assets/help5.1-en.jpg';">
+        <div class="img-caption">📸 Annoterat formulär som visar fälten Belopp, Betala från, Kategori och Anteckning.</div>
+        
         <p><strong>För att lägga till en utgift:</strong> Tryck på +-knappen (synlig på kontrollpanelen och transaktionsskärmen), välj "Utgift", ange beloppet, välj datum, välj kontot pengarna kommer från ("Betala från"), välj en grupp och kategori, lägg valfritt till anteckningar/taggar/kvitto och tryck på Spara. Kontosaldot kommer omedelbart att återspegla avdraget.</p>
         <h3>5.2 Registrera en inkomst</h3>
         <p>En inkomst registrerar pengar som kommer in på ett av dina konton — en lön, frilansbetalning, kontantgåva eller något annat inflöde. Tryck på +, välj "Inkomst", ange beloppet, välj kontot pengarna kom in på ("Betala till"), välj en inkomstgrupp och kategori, lägg till anteckningar vid behov och tryck på Spara.</p>
         <h3>5.3 Överföringar mellan konton</h3>
-        <div class="screenshot">🔄 [SCREENSHOT: Transaktionsformulär - Överföring] <br>Bildtext som pekar på de dubbla kontoväljarna: 'Betala från' och 'Betala till'.</div>
+        
+        <img src="assets/help5.3-en.jpg" alt="Transaktionsformulär - Överföring" class="hero-image" onerror="this.onerror=null;this.src='assets/help5.3-en.jpg';">
+        <div class="img-caption">🔄 Bildtext som pekar på de dubbla kontoväljarna: 'Betala från' och 'Betala till'.</div>
+        
         <p>En överföring registrerar förflyttningen av pengar mellan två av dina egna konton — till exempel att betala din kreditkortsräkning från ditt lönekonto. Tryck på +, välj "Överföring", ange beloppet, välj källkontot ("Betala från") och målkontot ("Betala till"), välj datum, lägg till anteckningar och tryck på Spara. Överföringar påverkar inte din totala nettoförmögenhet men ändrar saldon på enskilda konton.</p>
         <h3>5.4 Bifoga kvitton</h3>
         <p>Du kan bifoga ett foto eller en PDF-kvitto till vilken transaktion som helst. När du har sparat en transaktion, öppna den och tryck på "Lägg till kvitto". Du kan ta ett nytt foto eller välja en befintlig bild från ditt bibliotek. Kvitton lagras på enheten och synkroniseras till iCloud tillsammans med dina övriga data.</p>
@@ -193,7 +208,10 @@ th { font-size: 12px; text-transform: uppercase; color: var(--secondary); letter
         <h3>6.3 Hantera räkningsinstanser</h3>
         <p>Varje genererad betalning är en instans. Du kan se alla instanser genom att öppna den återkommande räkningsmallen. Redigera en enskild instans utan att påverka mallen genom att öppna den och ändra belopp, datum eller anteckningar. För att hoppa över en instans (t.ex. en räkning som uteblivit), markera den som hoppad istället för betald.</p>
         <h3>6.4 Markera räkningar som betalda</h3>
-        <div class="screenshot">✅ [SCREENSHOT: Lista över kommande räkningar] <br>Vy över väntande räkningar med åtgärden 'Markera som betald' framhävd.</div>
+        
+        <img src="assets/help6.4-en.jpg" alt="Lista över kommande räkningar" class="hero-image" onerror="this.onerror=null;this.src='assets/help6.4-en.jpg';">
+        <div class="img-caption">✅ Vy över väntande räkningar med åtgärden 'Markera som betald' framhävd.</div>
+        
         <p>Gå till "Kommande räkningar" i huvudmenyn. Detta visar räkningar som förfaller inom de närmaste 30 dagarna. Tryck på en räkning och välj "Markera som betald" för att bekräfta betalningen, och justera vid behov det faktiska beloppet om det skiljer sig från standardvärdet. När den markerats som betald skapar räkningsinstansen en motsvarande transaktion i din historik.</p>
     </section>
 
@@ -206,14 +224,20 @@ th { font-size: 12px; text-transform: uppercase; color: var(--secondary); letter
         <h3>7.3 Överför balans (Carry-Forward)</h3>
         <p>När Överför balans är aktiverat läggs eventuellt outnyttjat belopp i slutet av en period till i nästa periods budget. Om din budget för Mat till exempel är 5 000 kr och du bara spenderar 4 000 kr, börjar nästa månad med 6 000 kr (5 000 kr bas + 1 000 kr överfört).</p>
         <h3>7.4 Spåra budgethälsa</h3>
-        <div class="screenshot">📊 [SCREENSHOT: Indikatorer för budgethälsa] <br>Exempel på Gröna (Frisk), Orange (Närmar sig gränsen) och Röda (Över budget) framstegsmätare.</div>
+        
+        <img src="assets/help7.4-en.jpg" alt="Indikatorer för budgethälsa" class="hero-image" onerror="this.onerror=null;this.src='assets/help7.4-en.jpg';">
+        <div class="img-caption">📊 Exempel på Gröna (Frisk), Orange (Närmar sig gränsen) och Röda (Över budget) framstegsmätare.</div>
+        
         <p>Avsnittet "Aktiva budgetar" och kontrollpanelen visar din nuvarande status: hur mycket som har tilldelats, hur mycket som spenderats hittills, återstående balans och en färgkodad framstegsmätare. Budgetanalys (avsnitt 8.2) ger en historisk överblick.</p>
     </section>
 
     <section id="reports-analytics">
         <h2>8. Rapporter och analys</h2>
         <h3>8.1 Månadsrapport</h3>
-        <div class="screenshot">📈 [SCREENSHOT: Sammanfattning av månadsrapport] <br>Kontrollpanelsvy med cirkeldiagrammet över kategorisammansättning.</div>
+        
+        <img src="assets/help8.1-en.jpg" alt="Sammanfattning av månadsrapport" class="hero-image" onerror="this.onerror=null;this.src='assets/help8.1-en.jpg';">
+        <div class="img-caption">📈 Kontrollpanelsvy med cirkeldiagrammet över kategorisammansättning.</div>
+        
         <p>Månadsrapporten ger dig en detaljerad finansiell sammanställning för varje avslutad månad. Gå till "Månadsrapport" i huvudmenyn. Den visar: Totala inkomster, Totala utgifter, Netto kassaflöde, Utgifter per grupp (visuellt diagram), Utgifter per kategori, Kontosaldon vid månadens slut och största utgifter. Använd navigeringspilarna för att flytta mellan avslutade månader.</p>
         <h3>8.2 Budgetanalys</h3>
         <p>Budgetanalys ger en historisk överblick över prestandan för dina återkommande budgetar. För varje budget kan du se prestanda per period (inom/utanför mål), genomsnittliga utgifter mot mål, bästa och sämsta månaderna samt en trendlinje. Detta hjälper till att identifiera budgetmål som är för höga eller för låga och upptäcka utgiftsförskjutningar.</p>
@@ -250,14 +274,20 @@ th { font-size: 12px; text-transform: uppercase; color: var(--secondary); letter
     <section id="workspaces-collaboration">
         <h2>10. Arbetsytor och samarbete</h2>
         <h3>10.1 Översikt över arbetsytor</h3>
-        <div class="screenshot">🏠 [SCREENSHOT: Arbetsytans väljare] <br>Visar navigeringspunkten högst upp och listan över tillgängliga ytor (Personlig + Delad).</div>
+        
+        <img src="assets/help10.1-en.jpg" alt="Arbetsytans väljare" class="hero-image" onerror="this.onerror=null;this.src='assets/help10.1-en.jpg';">
+        <div class="img-caption">🏠 Visar navigeringspunkten högst upp och listan över tillgängliga ytor (Personlig + Delad).</div>
+        
         <p>En arbetsyta är en helt isolerad finansiell miljö. Expense mnAI stöder två typer: <strong>Personlig arbetsyta</strong> (privat, lagrad i din privata iCloud-databas) och <strong>Delade arbetsytor</strong> (samarbete, lagrad i en delad iCloud-databas). Växla mellan arbetsytor när som helst via väljaren (tryck på namnet/avataren högst upp).</p>
         <h3>10.2 Personlig arbetsyta</h3>
         <p>Din personliga arbetsyta skapas automatiskt vid första körningen (identifieras av en blomikon). Den lagras enbart i din privata iCloud-databas. Personerna du bjuder in till delade arbetsytor har ingen åtkomst till din personliga arbetsyta. Den kan inte raderas, döpas om eller överföras.</p>
         <h3>10.3 Delade arbetsytor</h3>
         <p>Delade arbetsytor kräver en prenumeration på Familjedelning. Använd dessa för att spåra hushållsinkomster/utgifter tillsammans, hantera gemensamma budgetar eller dela räkningar. Alla inbjudna medlemmar ser samma data i realtid och har full läs-/skrivåtkomst. Om ägarens Familjedelningsplan löper ut förblir arbetsytan synlig för deltagarna tills ägaren uttryckligen återkallar åtkomsten.</p>
         <h3>10.4 Bjuda in andra att samarbeta</h3>
-        <div class="screenshot">✉️ [SCREENSHOT: Bjud in medarbetare] <br>iCloud-delningsbladet som visas efter att man tryckt på delningsikonen.</div>
+        
+        <img src="assets/help10.4-en.jpg" alt="Bjud in medarbetare" class="hero-image" onerror="this.onerror=null;this.src='assets/help10.4-en.jpg';">
+        <div class="img-caption">✉️ iCloud-delningsbladet som visas efter att man tryckt på delningsikonen.</div>
+        
         <p><strong>Krav:</strong> Familjedelningsplan, arbetsytan är redan synkroniserad till iCloud. För att skicka en inbjudan: öppna arbetsytans väljare, tryck på delningsikonen bredvid den delade arbetsytan (eller gå till arbetsytans inställningar → "Bjud in personer"). iCloud-delningsbladet visas; dela länken via Meddelanden, Mail, AirDrop, etc. Mottagaren trycker på länken och accepterar systeminbjudan för att gå med.</p>
         <h3>10.5 Acceptera en inbjudan till arbetsyta</h3>
         <p>Öppna inbjudningslänken på din iPhone, iPad eller Mac där Expense mnAI är installerat. En systemprompt "Gå med i [Arbetsytans namn]?" visas. Tryck på Gå med. Arbetsytan visas i din väljare inom några sekunder. Om den inte visas direkt, stäng och öppna appen igen och vänta upp till en minut. Du behöver inte själv ha en betald plan för att gå med i en delad arbetsyta.</p>
@@ -293,8 +323,6 @@ th { font-size: 12px; text-transform: uppercase; color: var(--secondary); letter
 
     <p style="text-align: center; margin-top: 80px; font-size: 13px; color: var(--secondary);">Expense mnAI — Din finansiella arkitekt, säker och privat.</p>
 </div>
-```
-
-\</div\>
-\</body\>
-\</html\>
+</div>
+</body>
+</html>
